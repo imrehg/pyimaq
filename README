@@ -1,0 +1,30 @@
+PyIMAQ
+======
+
+Python library to interface with the National Instruments (NI) Vision
+Acquisition Software (VAS). Support for NI-IMAQ and NI-IMAQ I/O is planned.
+The NI-IMAQdx interface is non-free, thus I don't have access to it
+at the moment.
+
+Unfortunately, NI-IMAQ is available only on Microsoft Windows computers,
+and apparently no Linux support is planned at this time.
+
+On Windows, PyIMAQ talks to the proprietary DLLs provided by NI.
+
+Design
+======
+
+PyIMAQ follows a similar architecture to PyVISA [1] (different author).
+A core functionality is provided, that can be thought of a "c header ->
+python" translation. If you want to write your own routines over these
+function references then you only need that single file.
+
+A more "Pythonized" intermediate layer is also available ready to use.
+
+[1] PyVISA http://pyvisa.sourceforge.net/
+
+License
+=======
+
+See LICENSE.txt for information.
+
